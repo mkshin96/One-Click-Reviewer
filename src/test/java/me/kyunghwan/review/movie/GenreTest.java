@@ -1,5 +1,6 @@
 package me.kyunghwan.review.movie;
 
+import me.kyunghwan.review.genre.Genre;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 

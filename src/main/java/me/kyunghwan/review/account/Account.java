@@ -8,7 +8,7 @@ import java.util.HashSet;
 import java.util.Set;
 
 @AllArgsConstructor
-@NoArgsConstructor 
+@NoArgsConstructor
 @Getter
 @Entity
 public class Account {

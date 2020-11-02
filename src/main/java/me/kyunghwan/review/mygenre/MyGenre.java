@@ -1,11 +1,10 @@
 package me.kyunghwan.review.mygenre;
 
 import lombok.AllArgsConstructor;
-import lombok.Builder;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import me.kyunghwan.review.account.Account;
-import me.kyunghwan.review.movie.Genre;
+import me.kyunghwan.review.genre.Genre;
 
 import javax.persistence.*;
 

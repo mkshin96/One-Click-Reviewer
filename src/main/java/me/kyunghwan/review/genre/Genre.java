@@ -1,8 +1,10 @@
-package me.kyunghwan.review.movie;
+package me.kyunghwan.review.genre;
 
 import lombok.*;
+import me.kyunghwan.review.moviegenre.MovieGenre;
 
 import javax.persistence.*;
+import java.util.List;
 
 @AllArgsConstructor
 @NoArgsConstructor
@@ -17,4 +19,6 @@ public class Genre {
     @Column(nullable = false, unique = true)
     private String name;
 
+    @OneToMany(mappedBy = "genre")
+    private List<MovieGenre> movies;
 }

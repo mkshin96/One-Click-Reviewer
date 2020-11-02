@@ -1,4 +1,4 @@
-package me.kyunghwan.review.movie;
+package me.kyunghwan.review.genre;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 
