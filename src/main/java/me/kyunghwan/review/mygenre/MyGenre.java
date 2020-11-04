@@ -1,6 +1,7 @@
 package me.kyunghwan.review.mygenre;
 
 import lombok.AllArgsConstructor;
+import lombok.Builder;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import me.kyunghwan.review.account.Account;
@@ -8,7 +9,6 @@ import me.kyunghwan.review.genre.Genre;
 
 import javax.persistence.*;
 
-@AllArgsConstructor
 @NoArgsConstructor
 @Getter
 @Entity
@@ -26,4 +26,10 @@ public class MyGenre {
     @JoinColumn(name = "GENRE_ID")
     private Genre genre;
 
+    @Builder
+    public MyGenre(Long idx, Account account, Genre genre) {
+        this.idx = idx;
+        this.account = account;
+        this.genre = genre;
+    }
 }

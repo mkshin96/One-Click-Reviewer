@@ -7,7 +7,6 @@ import javax.persistence.*;
 import java.util.HashSet;
 import java.util.Set;
 
-@AllArgsConstructor
 @NoArgsConstructor
 @Getter
 @Entity
@@ -38,4 +37,12 @@ public class Account {
         getMyGenres().add(myGenre);
     }
 
+    @Builder
+    public Account(Long idx, String email, String password, LoginType loginType, Boolean isVerified) {
+        this.idx = idx;
+        this.email = email;
+        this.password = password;
+        this.loginType = loginType;
+        this.isVerified = isVerified;
+    }
 }

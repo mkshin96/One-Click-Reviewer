@@ -1,5 +1,6 @@
 package me.kyunghwan.review.moviegenre;
 
+import lombok.Builder;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import me.kyunghwan.review.genre.Genre;
@@ -16,9 +17,17 @@ public class MovieGenre {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long idx;
 
-    @ManyToOne(fetch = FetchType.LAZY)
+    @ManyToOne(fetch = FetchType.EAGER)
     private Genre genre;
 
-    @ManyToOne(fetch = FetchType.LAZY)
+    @ManyToOne(fetch = FetchType.EAGER)
     private Movie movie;
+
+    @Builder
+    public MovieGenre(Long idx, Genre genre, Movie movie) {
+        this.idx = idx;
+        this.genre = genre;
+        this.movie = movie;
+    }
+
 }
